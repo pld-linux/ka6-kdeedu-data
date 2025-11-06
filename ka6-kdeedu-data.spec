@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kdeedu-data
 Summary:	kdeedu-data
 Name:		ka6-%{kaname}
-Version:	25.08.2
+Version:	25.08.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e5a660ce20d0025d6f680ce82e05be13
+# Source0-md5:	85e1098ae3bca78f2f61370cb7fd75fa
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
@@ -23,8 +23,8 @@ BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-BuildArch:	noarch
 Obsoletes:	ka5-%{kaname} < %{version}
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
